@@ -28,11 +28,11 @@ import sys
 
 # Initialize Groq client
 # Groq: LLama 3 API
-client = Groq(api_key='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')
+client = Groq(api_key='')
 
 # Initialize Cohere client
 # Cohere: R+ API
-co = cohere.Client('9LAJ5gc8vdP3aZeZVf9LuBuGDddEPol4OAwyP4NK')
+co = cohere.Client('')
 
 
 # Global flag to control the listening process
@@ -362,7 +362,7 @@ def get_news():
     Fetches the latest news headlines using NewsAPI.
     """
     try:
-        API_KEY = "52059b6c89574045aa0bae4fb07b36b9"
+        API_KEY = ""
         url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}"
         response = requests.get(url)
         news_data = response.json()
@@ -386,7 +386,7 @@ def get_news():
 
 def get_weather(location):
     """Fetch real-time weather information."""
-    API_KEY = "a43420aa057ff93f06737a21e5a848bb"
+    API_KEY = ""
     url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={API_KEY}"
     try:
         response = requests.get(url)
@@ -406,7 +406,7 @@ def get_weather(location):
 # function to get symbol from stock name
 # function to get financial data
 
-API_KEY = '06D6QLTURSKUCDV9'
+API_KEY = ''
 
 
 def get_symbol_from_name_for_stock(stock_name):
